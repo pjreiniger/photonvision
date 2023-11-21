@@ -1,0 +1,22 @@
+load("@rules_java//java:defs.bzl", "java_binary", "java_library", "java_test")
+
+java_test(
+    name = "targeting-test",
+    srcs = glob(["**/*.java"]),
+    deps = [
+        "//photon-targeting/src/main/java/org/photonvision:photon-targeting",
+        "@bzlmodrio-allwpilib//libraries/java/wpimath",
+        "@maven//:org_junit_jupiter_junit_jupiter_api",
+        "@maven//:org_junit_jupiter_junit_jupiter_params",
+        "@maven//:org_junit_jupiter_junit_jupiter_engine",
+    ],
+    runtime_deps = [
+        "@maven//:org_junit_platform_junit_platform_commons",
+        "@maven//:org_junit_platform_junit_platform_console",
+        "@maven//:org_junit_platform_junit_platform_engine",
+        "@maven//:org_junit_platform_junit_platform_launcher",
+        "@maven//:org_junit_platform_junit_platform_suite_api",
+    ],
+    args = ["--select-package", "org"],
+        main_class = "org.junit.platform.console.ConsoleLauncher",
+)

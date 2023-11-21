@@ -1,0 +1,7 @@
+
+build --java_language_version=17
+build --proto_toolchain_for_java=//:quickbuf_toolchain
+
+test --test_output=errors
+
+build --cxxopt=-std=c++20

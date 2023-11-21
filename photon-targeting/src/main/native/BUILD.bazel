@@ -1,0 +1,21 @@
+cc_library(
+    name = "photon-targeting",
+    srcs = glob(["**/*.cpp"]),
+    hdrs = glob(["**/*.h"]),
+    includes = ['include'],
+    visibility = ["//visibility:public"],
+    deps = [
+        # "@bzlmodrio-allwpilib//libraries/cpp/apriltag",
+        # "@bzlmodrio-allwpilib//libraries/cpp/cscore",
+        # "@bzlmodrio-allwpilib//libraries/cpp/ntcore",
+        # "@bzlmodrio-allwpilib//libraries/cpp/hal",
+        # "@bzlmodrio-allwpilib//libraries/cpp/wpimath",
+        # "@bzlmodrio-allwpilib//libraries/cpp/wpinet",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpilibc",
+        # "@bzlmodrio-allwpilib//libraries/cpp/wpiutil",
+        # "@bzlmodrio-opencv//libraries/java/opencv",
+        # "@maven//:org_ejml_ejml_simple",
+        # "@maven//:us_hebi_quickbuf_quickbuf_runtime",
+        # "//photon-targeting/src/main/proto:java_proto",
+    ],
+)

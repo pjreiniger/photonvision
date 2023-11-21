@@ -1,0 +1,10 @@
+
+
+cc_test(
+    name = "cpp-test",
+    srcs = glob(["**/*.cpp"]),
+    deps = [
+        "//photon-targeting/src/main/native:photon-targeting",
+        "@gtest",
+    ]
+)
